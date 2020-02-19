@@ -9,12 +9,12 @@ This solution was developed in order to validate user password according to the 
 
 An open RESTful API called as "/SignInAuthentication" was created to receive the user password (string type field of a JSON request) and return a boolean response based on the acceptance criteria listed above.
 Two Contracts were created:
-- SignInAuthRequest: A JSON request is sent to AccountPasswordValidator service based on "SignInAuthRequest" contract. Example:
+- PasswordValidatorRequest: A JSON request is sent to AccountPasswordValidator service based on "PasswordValidator" contract. Example:
 {
   "userPassword": "12354686758",
   "userName": "atest11@mailinator.com"
 };
-- SignInAuthResponse: A JSON response is returned based on "SignInAuthResponse" contract. Example:
+- PasswordValidatorResponse: A JSON response is returned based on "SignInAuthResponse" contract. Example:
 {	
 	"isValid":True,
 	"message":"Authorized"
@@ -54,10 +54,10 @@ We can run the application by Visual Studio 2019 (v16.4, latest preview) with 2 
 Important files and paths
 --------------------------
 The following files and folders dependencies must be added in the "AccountPasswordValidatorTests" project dependency in order to UniTest work properly:
-- <PackageReference Include="Moq" Version="4.13.1" />
-- <PackageReference Include="nunit" Version="3.12.0" />
-- <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-- <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+- PackageReference Include="Moq" Version="4.13.1"
+- PackageReference Include="nunit" Version="3.12.0" 
+- PackageReference Include="NUnit3TestAdapter" Version="3.13.0" 
+- PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" 
 
 Test Execution (UniTest)
 --------------------------
